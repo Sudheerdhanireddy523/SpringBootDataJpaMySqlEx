@@ -23,16 +23,16 @@ public class ConsoleRunner implements CommandLineRunner{
 		// TODO Auto-generated method stub
 		// save the data
 		
-		repo.save(new Product(6,"sudheer", 34.89));
-		repo.save(new Product(23,"kumar", 89.78));
+		//repo.save(new Product(6,"sudheer", 34.89));
+		//repo.save(new Product(23,"kumar", 89.78));
 		
 		// update call
 		
-		repo.save(new Product(6,"salma", 23.89));
+		//repo.save(new Product(6,"salma", 23.89));
 		
 		//Bulk data insert
 		
-		List<Product> prds=Arrays.asList(new Product(3, "samantha", 23.89),
+		/*List<Product> prds=Arrays.asList(new Product(3, "samantha", 23.89),
 				new Product(4, "kajole", 33.89),
 				new Product(8, "devinarayanan", 73.89),
 				new Product(9, "srujana", 93.89)
@@ -55,12 +55,13 @@ public class ConsoleRunner implements CommandLineRunner{
 		list.forEach(System.out::println);
 		
 		// delete operation
-		repo.deleteById(6);
+	//	repo.deleteById(6);
 		
 		// delete all rows
-		repo.deleteAll();
+	//	repo.deleteAll();
 		
-		repo.deleteAllInBatch();
+	//	repo.deleteAllInBatch();
 		
+	}*/
 	}
 }
