@@ -84,7 +84,36 @@ public class AppRunner implements CommandLineRunner {
 // using  findAllById 
 		//repo.findAllById(Arrays.asList(2,4,6,8)).
 		//forEach(System.out::println);
+		// findBy eual code
 		repo.findByProdCode("A").forEach(System.out::println);
+		
+		//findBy lessthan or equla code
+		
+		repo.findByProdCostLessThan(8.3).forEach(System.out::println);
+		repo.findByProdCostLessThanEqual(3.3).forEach(System.out::println);
+		
+		//findby Or code
+		repo.findByProdCodeOrProdCost("A", 3.3).forEach(System.out::println);
+		
+		//findBy isNotNull code
+		
+		repo.findByProdCodeIsNotNull().forEach(System.out::println);
+		
+		//findBy between code
+		repo.findByProdCostBetween(3.3,8.3).forEach(System.out::println);
+		
+		//findBy In code
+		repo.findByProdCodeIn(Arrays.asList("A","B")).forEach(System.out::println);
+		
+		//findBy orderby code
+		repo.findByProdCostOrderByProdCode(4.3).forEach(System.out::println);
+		
+		//findBy like code
+		repo.findByProdCodeLike("A").forEach(System.out::println);
+		repo.findByProdCodeContaining("A").forEach(System.out::println);
+		
+		
+		
 		
 		
 		
