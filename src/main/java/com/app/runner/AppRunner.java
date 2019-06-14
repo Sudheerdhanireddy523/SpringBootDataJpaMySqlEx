@@ -25,12 +25,12 @@ public class AppRunner implements CommandLineRunner {
 		List<Product> list=Arrays.asList(new Product(1, "A", 2.3),
 				
 				new Product(2, "B", 3.3),
-				new Product(3, "C", 3.3),
+				new Product(3, "A", 3.3),
 				new Product(4, "D", 4.3),
-				new Product(5, "E", 2.3),
-				new Product(6, "F", 5.3),
+				new Product(5, "A", 2.3),
+				new Product(6, "B", 5.3),
 				
-				new Product(7, "G", 6.3),
+				new Product(7, "A", 6.3),
 				new Product(8, "H", 3.3),
 				new Product(9, "I", 8.3),
 				new Product(10, "J", 3.3)
@@ -82,8 +82,9 @@ public class AppRunner implements CommandLineRunner {
 				repo.findAll(ex,PageRequest.of(1, 2)).forEach(System.out::println); */
 				
 // using  findAllById 
-		repo.findAllById(Arrays.asList(2,4,6,8)).
-		forEach(System.out::println);
+		//repo.findAllById(Arrays.asList(2,4,6,8)).
+		//forEach(System.out::println);
+		repo.findByProdCode("A").forEach(System.out::println);
 		
 		
 		
